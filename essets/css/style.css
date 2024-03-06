@@ -23,14 +23,19 @@ li,a{
     width: 250px;
     height: 80px;
 }
+nav ul li{
+    padding-inline: 15px;
+}
 /* header section end */
 
 /* banner section start */
 .banner{
-    min-height: 100vh;
+    min-height: 118vh;
     color: white;
     background: url('../images/banner.png');
-    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     position: relative;
 
     .info{
@@ -71,24 +76,36 @@ li,a{
 
 /* about section start*/
 .about-section{
+    
     .read-mor-btn{
-        background-color: var(--theme-color);;
+        background-color: var(--theme-color);
         border: none;
     }
     & h3{
         font-size: 48px;
     }
-    .text{
-        color: var(--theme-color);;
+    .about-main-text{
+        color: var(--theme-color);
+        position: relative;
+        &::after{
+            content: "";
+            height: 2px;
+            width: 50px;
+            background-color: var(--theme-color);
+            position: absolute;
+            top: 50%;
+            left: 13%;
+        }
     }
 
-
 }
+
+
 /* about section end*/
 
 /* service section start*/
 .Service{
-    .text{color: var(--theme-color);;}
+    .text{color: var(--theme-color);}
     h3{
         font-size: 48px;
     }
@@ -112,10 +129,33 @@ li,a{
     }
     .btn-read-more{
         border: none;
+        color: black;
+        font-weight: 600;
     }
     .btn-read-more a{ 
         border-bottom: none;
         color: black;
+    }
+    .service-main-text{
+        position: relative;
+        &::after{
+            content: "";
+            height: 1px;
+            width: 50px;
+            background-color: var(--theme-color);
+            position: absolute;
+            top: 50%;
+            left: 54%;
+        }
+        &::before{
+            content: "";
+            height: 1px;
+            width: 50px;
+            background-color: var(--theme-color);
+            position: absolute;
+            top: 50%;
+            right: 54%;
+        }
     }
 }
 /* service section end*/
@@ -124,7 +164,10 @@ li,a{
 .review-section{
     background: url('../images/review-bg.png');
     background-size: 100% 100%;
+    padding: 3rem;
+    text-align: center;
 }
+
 .review-section i{
     color: #F79C10;
 }
@@ -133,7 +176,6 @@ li,a{
     color: var(--theme-color);
 }
 .client-sec{
-    
     border-radius: 5%;
     position: relative;
 }
@@ -149,12 +191,45 @@ li,a{
     text-decoration: none;
     color: black;
 }
+.review-main-text{
+    position: relative;
+    &::after{
+        content: "";
+        height: 1px;
+        width: 50px;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        left: 55%;
+    }
+    &::before{
+        content: "";
+        height: 1px;
+        width: 50px;
+        background-color: white;
+        position: absolute;
+        top: 50%;
+        right: 55%;
+    }
+}
 /* review-section end */
 
 /* download-section start */
 .download a{
     text-decoration: none;
     color: white;
+}
+.download-main-text {
+    position: relative;
+    &::after{
+        content: "";
+        height: 1px;
+        width: 50px;
+        background-color: var(--theme-color);
+        position: absolute;
+        top: 50%;
+        left: 25%;
+    }
 }
 /* download-section end */
 
@@ -229,19 +304,32 @@ li,a{
     margin: 3px;
     background-color: #595959;
     border-radius: 50%;
+    cursor: pointer;
+    .footer-icon{
+        color: #000000;
+    }
     &:hover{
         background-color: var(--theme-color);
+        .footer-icon{
+            color: #fff;
+        }
     }
+
 }
 .footer-section ul{
     padding: 0px;
 }
 .footer-section hr{
     width: 200px;
+    margin: 15px 0px;
 }
 .footer-info{
     padding: 200px 0px 50px 0px;
 }
+.social-icon{
+    margin-top: 30px;
+}
+
 /* footer section end */
 
 @media(max-width:992px){
@@ -266,6 +354,7 @@ li,a{
     & h3{
         font-size: 33px;
     }
+    
 }
 .Service{
     .text{color: var(--theme-color);;}
@@ -274,8 +363,11 @@ li,a{
     }
 }
 .image{
-    top: -22%;  
-    left: 40%;
+    top: -20%;  
+    left: 30%;
+}
+.review-sec-client1{
+    margin-bottom: 100px !important;
 }
 }
 
@@ -290,6 +382,9 @@ li,a{
     .footer-section hr{
        margin: auto;
     }
+    .review-section{
+        padding: 1rem;
+    }
 }
 
 @media(max-width:500px){
@@ -298,8 +393,8 @@ li,a{
         height: 50px;
     }
     .image{
-        top: -20%;  
-        left: 30%;
+        top: -12%;  
+        left: 28%;
     }
 }
 @media(max-width:280px){
