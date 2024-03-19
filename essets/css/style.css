@@ -250,6 +250,12 @@ a{
 .client-sec{
     border-radius: 25px;
     position: relative;
+    & h5{
+        font-family: Inter;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29.25px;
+    }
 }
 .image {
     position: absolute;
@@ -421,12 +427,16 @@ a{
     background: url('../images/footer.png');
     background-size: cover;
     .footer-link{
-        color: #fff;
+        color: #D2D3D2;
         transition: all 0.8s ease-in-out;
         &:hover{
             color: var(--theme-color);
         }
     }
+    & h6{
+        color: #ffffff !important;
+    }
+
    
 }
 .footer-section span{
@@ -491,15 +501,11 @@ a{
             top:77%;
             left: 40%;
         }
-       
     }
     .about-section{
-    
     & h3{
         font-size: 33px;
-    }
-   
-    
+    }   
 }
 .Service{
     .text{color: var(--theme-color);;}
@@ -561,8 +567,7 @@ a{
         .mySwiper{
             padding:0 0px;
         }
-    }
-    
+    }   
 }
 .blog-card{
     width: 80%;
@@ -602,7 +607,11 @@ a{
             }
         }
     }
+    .blog-card{
+        width: 100%;
+    }
 }
+
 @media(max-width:280px){
     .btn-more{
         margin-top: 10px;
